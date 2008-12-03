@@ -19,6 +19,7 @@ BuildRequires: perl(B::Utils)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Text::Abbrev)
 BuildRequires: perl(Text::Balanced)
+Provides:      perl(Data::Dump::Streamer::_::Printers)
 
 
 
