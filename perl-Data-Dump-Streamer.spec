@@ -34,9 +34,6 @@ no description found
 echo yes | %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
-%check
-make test
-
 %install
 rm -rf %buildroot
 %makeinstall_std
