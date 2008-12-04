@@ -16,6 +16,7 @@ BuildRoot:  %{_tmppath}/%{name}-%{version_orig}-%{release}-buildroot
 BuildRequires: perl-devel
 BuildRequires: perl(B::Deparse)
 BuildRequires: perl(B::Utils)
+BuildRequires: perl(PadWalker)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Text::Abbrev)
 BuildRequires: perl(Text::Balanced)
