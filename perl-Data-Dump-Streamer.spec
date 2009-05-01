@@ -1,7 +1,7 @@
 %define realname   Data-Dump-Streamer
 %define version_orig    2.08-40
-%define version   %(echo %{version_orig} | sed s/-/_/)
-%define release    %mkrel 2
+%define version   2.09
+%define release    %mkrel 1
 
 Name:       perl-%{realname}
 Version:    %{version}
