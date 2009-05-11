@@ -1,7 +1,6 @@
 %define realname   Data-Dump-Streamer
-%define version_orig    2.08-40
 %define version   2.09
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{realname}
 Version:    %{version}
@@ -10,7 +9,7 @@ License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Accurately serialize a data structure as Perl code
 Url:        http://search.cpan.org/dist/%{realname}
-Source:     http://www.cpan.org/modules/by-module/Data/%{realname}-%{version_orig}.tar.gz
+Source:     http://www.cpan.org/modules/by-module/Data/%{realname}-%{version}.tar.gz
 BuildRequires: perl-devel
 BuildRequires: perl(B::Deparse)
 BuildRequires: perl(B::Utils)
@@ -29,7 +28,7 @@ is output using the least number of Perl statements as convenient, usually only
 one. Self-referential structures, closures, and objects are output correctly.
 
 %prep
-%setup -q -n %{realname}-%{version_orig}
+%setup -q -n %{realname}-%{version}
 
 %build
 echo yes | %{__perl} Makefile.PL INSTALLDIRS=vendor
