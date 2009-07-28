@@ -1,25 +1,26 @@
-%define realname   Data-Dump-Streamer
-%define version   2.09
-%define release    %mkrel 2
+%define upstream_name    Data-Dump-Streamer
+%define upstream_version 2.09
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Accurately serialize a data structure as Perl code
-Url:        http://search.cpan.org/dist/%{realname}
-Source:     http://www.cpan.org/modules/by-module/Data/%{realname}-%{version}.tar.gz
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(B::Deparse)
 BuildRequires: perl(B::Utils)
 BuildRequires: perl(PadWalker)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Text::Abbrev)
 BuildRequires: perl(Text::Balanced)
-Provides:      perl(Data::Dump::Streamer::_::Printers)
-Requires:      perl(B::Utils)
+BuildRequires: perl-devel
 BuildRoot:  %{_tmppath}/%{name}-%{version}
+Requires:      perl(B::Utils)
+Provides:      perl(Data::Dump::Streamer::_::Printers)
 
 %description
 Given a list of scalars or reference variables, writes out their contents in
@@ -28,7 +29,7 @@ is output using the least number of Perl statements as convenient, usually only
 one. Self-referential structures, closures, and objects are output correctly.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 echo yes | %{__perl} Makefile.PL INSTALLDIRS=vendor
