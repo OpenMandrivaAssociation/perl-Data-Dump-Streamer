@@ -1,5 +1,5 @@
 %define upstream_name    Data-Dump-Streamer
-%define upstream_version 2.13
+%define upstream_version 2.22
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -32,12 +32,15 @@ one. Self-referential structures, closures, and objects are output correctly.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-echo yes | %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+yes | %{__perl} Build.PL installdirs=vendor
+./Build
+
+%check
+./Build test
 
 %install
-rm -rf %buildroot
-%makeinstall_std
+%{__rm} -rf %{buildroot}
+./Build install destdir=%{buildroot}
 
 %clean
 rm -rf %buildroot
