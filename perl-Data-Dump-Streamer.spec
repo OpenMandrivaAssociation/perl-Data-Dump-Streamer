@@ -17,6 +17,7 @@ BuildRequires: perl(PadWalker)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Text::Abbrev)
 BuildRequires: perl(Text::Balanced)
+BuildRequires: perl(Module::Build)
 BuildRequires: perl-devel
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 Requires:      perl(B::Utils)
