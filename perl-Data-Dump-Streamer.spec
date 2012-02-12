@@ -1,9 +1,9 @@
 %define upstream_name    Data-Dump-Streamer
-%define upstream_version 2.22
+%define upstream_version 2.32
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 
 Summary:    Accurately serialize a data structure as Perl code
 License:    GPL+ or Artistic
