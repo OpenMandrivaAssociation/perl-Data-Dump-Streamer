@@ -36,7 +36,7 @@ yes | perl Build.PL installdirs=vendor
 ./Build
 
 %check
-# ./Build test
+./Build test
 
 %install
 ./Build install destdir=%{buildroot}
