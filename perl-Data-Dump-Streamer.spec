@@ -1,5 +1,5 @@
 %define upstream_name Data-Dump-Streamer
-%define upstream_version 2.32
+%define upstream_version 2.36
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Accurately serialize a data structure as Perl code
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Data/Data-Dump-Streamer-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(B::Deparse)
 BuildRequires:	perl(B::Utils)
@@ -47,5 +47,6 @@ yes | perl Build.PL installdirs=vendor
 %{perl_vendorarch}/Data
 %{perl_vendorarch}/DDS.pm
 %{perl_vendorarch}/auto/Data
+
 
 
