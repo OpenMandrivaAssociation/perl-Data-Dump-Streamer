@@ -1,5 +1,5 @@
 %define upstream_name Data-Dump-Streamer
-%define upstream_version 2.36
+%define upstream_version 2.37
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -47,6 +47,7 @@ yes | perl Build.PL installdirs=vendor
 %{perl_vendorarch}/Data
 %{perl_vendorarch}/DDS.pm
 %{perl_vendorarch}/auto/Data
+
 
 
 
