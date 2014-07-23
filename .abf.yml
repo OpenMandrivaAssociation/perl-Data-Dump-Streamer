@@ -1,5 +1,6 @@
 removed_sources:
   Data-Dump-Streamer-2.32.tar.gz: cd5d6eb337737c7b7d4536a70dda0cf816fe2ec7
   Data-Dump-Streamer-2.36.tar.gz: ccd2766db3b2341529266fd62dc541bd97da815b
-sources:
   Data-Dump-Streamer-2.37.tar.gz: 8891d203fa45150848757249e270bc046c48441c
+sources:
+  Data-Dump-Streamer-2.38.tar.gz: 66935c84957e1f0165ff144ef0c034787755b6cb
