@@ -1,9 +1,9 @@
 %define upstream_name Data-Dump-Streamer
-%define upstream_version 2.38
+%define upstream_version 2.39
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Accurately serialize a data structure as Perl code
 License:	GPL+ or Artistic
@@ -13,11 +13,14 @@ Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_
 
 BuildRequires:	perl(B::Deparse)
 BuildRequires:	perl(B::Utils)
+BuildRequires:  perl-B-Utils
 BuildRequires:	perl(PadWalker)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Text::Abbrev)
 BuildRequires:	perl(Text::Balanced)
 BuildRequires:	perl(Module::Build)
+BuildRequires:  perl(Algorithm::Diff)
+BuildRequires:  perl(JSON::XS)
 BuildRequires:	perl-devel
 Requires:	perl(B::Utils)
 Provides:	perl(Data::Dump::Streamer::_::Printers)
