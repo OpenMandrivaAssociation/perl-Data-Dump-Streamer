@@ -1,15 +1,13 @@
 %define upstream_name Data-Dump-Streamer
-%define upstream_version 2.39
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Version:	2.39
+Release:	2
 
 Summary:	Accurately serialize a data structure as Perl code
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	perl(B::Deparse)
 BuildRequires:	perl(B::Utils)
@@ -32,7 +30,7 @@ is output using the least number of Perl statements as convenient, usually only
 one. Self-referential structures, closures, and objects are output correctly.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 yes | perl Build.PL installdirs=vendor
